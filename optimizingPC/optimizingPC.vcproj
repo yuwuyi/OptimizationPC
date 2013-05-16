@@ -291,6 +291,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\MeshLib\Utils\Parser.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MeshLib\Utils\Parser.h"
+				>
+			</File>
+			<File
 				RelativePath=".\MeshLib\Point.h"
 				>
 			</File>
@@ -300,6 +308,14 @@
 			</File>
 			<File
 				RelativePath=".\MeshLib\HexMesh\Quad.h"
+				>
+			</File>
+			<File
+				RelativePath=".\MeshLib\Utils\TraitParser.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MeshLib\Utils\TraitParser.h"
 				>
 			</File>
 		</Filter>
