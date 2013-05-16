@@ -1,0 +1,7 @@
+optimizingPC.suo
+*.ilk
+*/Debug/
+*/Release/
+*.obj
+*.suo
+optimizingPC.ncb
