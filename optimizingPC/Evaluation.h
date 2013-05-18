@@ -2,14 +2,12 @@
 
 #include <vector>
 
-class Hex;
+class Window;
 
 class Evaluation
 {
 public:
-	Evaluation();
-	~Evaluation();
-
-	static double geometry(std::vector<Hex*>& hexes);
-	static int corner(std::vector<Hex*>& hexes);
+	static double geometry(Window *win);
+	static int corner(Window *win);
+	static double eva(Window *win, double alpha);
 };
