@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "../Point.h"
+#include "../Utils/TraitParser.h"
 #include "Common.h"
 
 class HexVertex;
@@ -29,7 +30,8 @@ public:
 	HexEdge *opposite(Quad *q1, Quad *q2);
 
 	double dihedral_angle(ORIENTATION o1, ORIENTATION o2);
-
+	
+	bool& isSelected() { return m_isSelected; }
 private:
 	bool m_boundary;
 	int m_id;
@@ -40,5 +42,13 @@ private:
 	Point m_center;	
 	std::vector<HexEdge*> m_edges;
 	Point m_quadNorm[6];
+	bool m_isSelected;
 };
+
+inline bool isSelect(Hex *hex) {
+	int isSel = -1;
+	TraitParser::ReadIntTrait(hex->property(), "select", 1, &isSel);
+	return isSel == 1;
+}
+
 #endif // Hex_h__

@@ -8,7 +8,7 @@
 #include <set>
 
 Hex::Hex(int id, int index, HexVertex *vers[8], std::string& property)
-: m_id(id), m_index(index), m_property(property),  m_boundary(false)
+: m_id(id), m_index(index), m_property(property),  m_boundary(false), m_isSelected(false)
 {
 	
 	for (int i = 0; i < 8; ++i) {

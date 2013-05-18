@@ -3,6 +3,7 @@
 #include "HexEdge.h"
 #include "HexMesh.h"
 #include "HalfQuad.h"
+#include "../Utils/TraitParser.h"
 #include "HexVertex.h"
 #include "HexMeshUtils.h"
 #include <iostream>
@@ -71,6 +72,7 @@ void HexMesh::read(const char *filename) {
 	//link vertex to tetra
 	for (stdext::hash_map<int, Hex*>::iterator b = id2Hex.begin(), e = id2Hex.end(); b != e; ++b) {
 		Hex *hex = (*b).second;
+		hex->isSelected() = isSelect(hex);
 		for (int i = 0; i < 8; ++i) {
 			HexVertex *hv = hex->vertex(i);
 			hv->add(hex);

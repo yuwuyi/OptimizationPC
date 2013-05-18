@@ -5,6 +5,7 @@
 #include <vector>
 
 class HexEdge;
+class HexMesh;
 class Hex;
 class HexVertex;
 class Quad;
